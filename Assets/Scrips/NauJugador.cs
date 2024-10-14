@@ -3,6 +3,39 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
+/*
+ * Repas
+ * Que hem vist:
+ *      - Crea objectes a l'escena.
+ *      -Crear EmptyObjects (per exemple per fer el GeneradorNumeros).
+ *      -Prefabs (per crear objectes quan el joc esta en execusio).
+ *         - Per crear-los : l'objecte que ja teniam creat l'arrosseguem a la carpeta Prefabs.
+ *         - Per crear un prefab a l'escena en execucio: metode Instantiate(variablePrefab).
+ *              -variablePrefab: variable de tipus gameObject
+ *              
+ *      - Trobar posicio objecte actual: transform.position
+ *      - Trobar marges panbtalla: Camera.main.ViewportToWorldPoint().
+ *      - [SerializeField]: per fer que una variable private de la classe es mostri a l'editor de Unity.
+ *      - Utilizar una imatge/sprite com si fos mes d'una subimatge.
+ *          - Seleccionem l'spirte
+ *          - En l'opcio Spirte Mode canviem de Single a Multiple, i cliquem boto Apply.
+ *          - Fem servir les opcions del boto Sprite Editor
+ *          
+ *      - Destruir objecte actual : Destroy(gameObject).
+ *      - Crida un metode al acap de x segons: Invoke("NomMetode" , xf).
+ *      - Cridar un metode al cap de x segons i cada y segons: InvokeRepeating("NomMetode", xf ,yf).
+ *      - Com aturar un InvokeRepeating: CancelInvoke("NomMetode).
+ *      - Detectar objecte toca a un altre:
+ *          - Afegir als objectes que volem que es toquin, els components: BoxCollider2D i Rigidbody2D.
+ *          - En BoxCollider2D : activar checkbox IsTrigger.
+ *          - En Rigibody2D: GravityScale posar-lo a 0.
+ *      
+ */
+
+
+
+
 public class NauJugador : MonoBehaviour
 {
     private float _vel;
